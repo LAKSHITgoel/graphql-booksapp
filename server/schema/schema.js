@@ -64,7 +64,7 @@ const RootQuery = new GraphQLObjectType({
     book: {
       type: BookType,
       args: {
-        id: { type: gqlString }
+        id: { type: ID }
       },
       resolve(parent, args) {
         //code to get data from DB
@@ -74,7 +74,7 @@ const RootQuery = new GraphQLObjectType({
     author: {
       type: AuthorType,
       args: {
-        id: { type: gqlString }
+        id: { type: ID }
       },
       resolve(parent, args) {
         //code to get author data from db
