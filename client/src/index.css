@@ -1,6 +1,6 @@
 body {
   background: #eee;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 #main h1 {
@@ -16,7 +16,12 @@ body {
 }
 
 #book-list {
+  top: 10%;
+  position: absolute;
+  width: 60%;
   padding: 0;
+  overflow: auto;
+  bottom: 45%;
 }
 
 #book-list li {
@@ -122,4 +127,3 @@ body {
   bottom: 10px;
   left: 10px;
 }
-

@@ -17,7 +17,7 @@ class BookList extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <ul id="book-list">
           <Query query={GET_BOOKS}>
             {({ loading, error, data }) => {

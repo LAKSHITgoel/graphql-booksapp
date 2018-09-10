@@ -40,6 +40,7 @@ export const GET_BOOK = gql`
       id
       author {
         name
+        age
         id
         books {
           name
@@ -51,7 +52,7 @@ export const GET_BOOK = gql`
 `;
 
 export const ADD_AUTHOR = gql`
-  mutation($name: String!, $age: Number!) {
+  mutation($name: String!, $age: Int!) {
     addAuthor(name: $name, age: $age) {
       name
       age

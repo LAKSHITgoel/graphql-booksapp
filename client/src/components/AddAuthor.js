@@ -21,7 +21,7 @@ class AddAuthor extends Component {
     mutate({
       variables: {
         name: this.state.authorName,
-        genre: this.state.authorAge
+        age: Number(this.state.authorAge)
       },
       refetchQueries: [{ query: GET_AUTHORS }]
     }).then(res => console.log(res));

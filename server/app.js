@@ -11,6 +11,7 @@ mongoose.connect(
 mongoose.connection.once("open", () => console.log("connected to database"));
 
 app.use(CORS());
+app.use(express.static("build"));
 
 app.use(
   "/graphql",
@@ -19,5 +20,9 @@ app.use(
     graphiql: true
   })
 );
+
+app.get("/", (req, res) => {
+  res.status(200).sendFile("index.html");
+});
 
 app.listen(4000, () => console.log("Server is Listening on localhost:4000"));

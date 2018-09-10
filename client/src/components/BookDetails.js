@@ -4,13 +4,15 @@ import { GET_BOOK } from "./queries";
 
 class BookDetails extends Component {
   displayBookDetails = () => {
-    const { book } = this.props.data;
+    const { book, loading } = this.props.data;
+    if (loading) return <p>Loading...</p>;
     if (book) {
       return (
         <div key={book.id}>
-          <h6>{`Name: ${book.name}`}</h6>
+          <p>{`Name: ${book.name}`}</p>
           <p>{`Genre: ${book.genre}`}</p>
           <p>{`Author: ${book.author.name}`}</p>
+          <p>{`Age: ${book.author.age}`}</p>
           <br />
           <br />
           <p>Other books by this author:</p>
