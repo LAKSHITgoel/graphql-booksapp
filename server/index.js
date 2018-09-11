@@ -12,7 +12,7 @@ mongoose.connect(
 mongoose.connection.once("open", () => console.log("connected to database"));
 
 app.use(CORS());
-app.use(express.static("build"));
+app.use(express.static("public"));
 
 app.use(
   "/graphql",
@@ -23,7 +23,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.status(200).sendFile("index.html");
+  res.status(200).sendFile("index");
 });
 
 app.listen(PORT, () => console.log(`Server is Listening on PORT:${PORT}`));
