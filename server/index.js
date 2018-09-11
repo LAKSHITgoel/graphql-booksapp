@@ -4,6 +4,7 @@ const graphqlHTTP = require("express-graphql");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 const CORS = require("cors");
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(
   "mongodb://LAKSHITgoel:lakshit123@ds161459.mlab.com:61459/graphql"
@@ -25,4 +26,4 @@ app.get("/", (req, res) => {
   res.status(200).sendFile("index.html");
 });
 
-app.listen(4000, () => console.log("Server is Listening on localhost:4000"));
+app.listen(PORT, () => console.log(`Server is Listening on PORT:${PORT}`));

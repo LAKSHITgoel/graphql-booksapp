@@ -1,14 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "A Book Store App using GraphQL React and Express",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Lakshit Goel",
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
@@ -17,5 +17,18 @@
     "lodash": "^4.17.10",
     "mongoose": "^5.2.13",
     "nodemon": "^1.18.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LAKSHITgoel/graphql-booksapp"
+  },
+  "keywords": [
+    "graphql",
+    "react",
+    "apollo-client",
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
